@@ -8,7 +8,7 @@
 
     <div class="content">
       <div class="header">
-        <img class="artist-image" :src="`/img/${artist.image}`" :style="artistImageStyle">
+        <img class="artist-image" :src="`img/${artist.image}`" :style="artistImageStyle">
         <div class="artist-quickinfo">
           <h1 class="artist-name">{{ artist.name }}</h1>
           <div class="artist-category">{{ artist.category }}</div>

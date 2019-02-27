@@ -9,7 +9,7 @@
            :key="artist.id"
            :data-artistId="artist.id"
            @click="artistSelected">
-        <img class="artist-image" :src="`/img/${artist.image}`">
+        <img class="artist-image" :src="`img/${artist.image}`">
         <div class="artist-content">
           <div class="artist-name">{{ artist.name }}</div>
           <div class="artist-category">{{ artist.category }}</div>
