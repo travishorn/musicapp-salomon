@@ -2,7 +2,7 @@
   <div class="artist">
     <div class="controls">
       <router-link to="/artists">
-        <img class="back-button" src="/img/icons/back-arrow.svg">
+        <img class="back-button" src="img/icons/back-arrow.svg">
       </router-link>
     </div>
 
