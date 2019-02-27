@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "name": "Rihanna",
+    "slug": "rihanna",
+    "image": "rihanna.jpg",
+    "category": "Hip Hop, R&B"
+  },
+  {
+    "id": 2,
+    "name": "Sukh E",
+    "slug": "sukh-e",
+    "image": "sukhe.jpg",
+    "category": "Pop singer"
+  },
+  {
+    "id": 3,
+    "name": "Jass Manak",
+    "slug": "jass-manak",
+    "image": "jassmanak.jpg",
+    "category": "Pop singer"
+  },
+  {
+    "id": 4,
+    "name": "Bohemia",
+    "slug": "bohemia",
+    "image": "bohemia.jpg",
+    "category": "Rapper"
+  },
+  {
+    "id": 5,
+    "name": "Jazzy B",
+    "slug": "jazzy-b",
+    "image": "jazzyb.jpg",
+    "category": "Pop singer"
+  },
+  {
+    "id": 6,
+    "name": "Guru Randhawa",
+    "slug": "guru-randhawa",
+    "image": "guru.jpg",
+    "category": "Hip Hop"
+  }
+]

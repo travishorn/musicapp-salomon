@@ -1,29 +1,69 @@
 <template>
-  <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+  <div class="container">
+    <div class="sidebar">
+      <div class="nav">
+        <div class="nav-title">Library</div>
+        <a class="nav-link active" href="#">Artists</a>
+        <a class="nav-link" href="#">Albums</a>
+        <a class="nav-link" href="#">Songs</a>
+        <a class="nav-link" href="#">Playlists</a>
+      </div>
+
+      <div class="nav">
+        <div class="nav-title">Discover</div>
+        <a class="nav-link" href="#">Store</a>
+        <a class="nav-link" href="#">Radio</a>
+        <a class="nav-link" href="#">For You</a>
+        <a class="nav-link" href="#">Browse</a>
+      </div>
     </div>
-    <router-view/>
+
+    <div class="main">
+      <router-view />
+    </div>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+<script>
+export default {
+  name: 'app',
+};
+</script>
+
+<style>
+@import url('https://fonts.googleapis.com/css?family=B612');
+
+html { font-size: 12px; }
+
+body {
+  font-family: 'B612', sans-serif;
+  color: #FFFFFF;
+  background-color: #191A28;
 }
-#nav {
-  padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 5fr;
+  padding: 5rem;
+}
+
+.nav {
+  margin-bottom: 5rem;
+  color: #82828A;
+}
+
+.nav-title {
+  text-transform: uppercase;
+}
+
+.nav-link {
+  display: block;
+  text-decoration: none;
+  color: #82828A;
+  margin: 2rem 0;
+}
+
+.nav-link.active {
+  color: #E63B51;
 }
 </style>
