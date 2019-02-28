@@ -1,29 +1,53 @@
-# musicapp
+# Music App
 
-## Project setup
+Visit the live web app at https://travishorn.github.io/musicapp
+
+I tried to replicated some of the look and feel of
+[Aurélien Salomon's Apple Music - Smooth floating](https://dribbble.com/shots/5527602-Apple-Music-Smooth-floating)
+dribbble shot.
+
+## Installation
+
+Clone the repository
+
+```
+git clone https://github.com/travishorn/musicapp.git
+```
+
+Change into the directory
+
+```
+cd musicapp
+```
+
+Install dependencies
+
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+## Development
+
+Compile and hot-reloads for development.
+
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
+## Deploy
+
+Build the web app.
+
 ```
 npm run build
 ```
 
-### Run your tests
+Built files will appear in `dist/` directory.
+
+## Testing
+
+Run tests.
+
 ```
 npm run test
 ```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
