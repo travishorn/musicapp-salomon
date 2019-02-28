@@ -14,6 +14,41 @@
           <div class="artist-category">{{ artist.category }}</div>
         </div>
       </div>
+
+      <div class="music">
+        <div class="albums">
+          <div class="album" v-for="album in artist.albums" :key="album.title">
+            <img class="album-image" :src="`img/albums/${album.image}`">
+            <div class="album-title">{{ album.title }}</div>
+            <div class="album-year">{{ album.year }}</div>
+          </div>
+        </div>
+
+        <div class="tracks">
+          <div class="tracks-popular">
+            <h3>Popular</h3>
+
+            <div class="track-listing">
+              <div class="track" v-for="track in artist.popularTracks" :key="track.title">
+                <img class="track-album-image" :src="`img/albums/${track.albumImage}`">
+
+                <div class="track-title-artist">
+                  <div class="track-title">{{ track.title }}</div>
+                  <div class="track-artist">{{ artist.name }}</div>
+                </div>
+
+                <div class="track-length">
+                  {{ track.length }}
+                </div>
+
+                <div class="track-controls">
+                  +
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -64,7 +99,6 @@ export default {
   height: 20rem;
   border-radius: 1rem;
   object-fit: cover;
-  z-index: 2;
   transform-origin: 0px 0px;
   animation: reposition 0.25s forwards;
 }
@@ -79,15 +113,91 @@ export default {
 }
 
 .artist-quickinfo {
-  z-index: 1;
   transform: translateX(-25%);
   opacity: 0;
-  animation: slideRight 0.5s forwards;
+  animation: slideIntoPlace 0.5s forwards;
 }
 
-@keyframes slideRight {
+.music {
+  transform: translateY(100%);
+  animation: slideIntoPlace 0.5s forwards;
+}
+
+.albums {
+  display: grid;
+  grid-auto-flow: column;
+  grid-gap: 5rem;
+  margin-top: -5rem;
+  max-width: 87vw;
+  overflow: hidden;
+  color: #000000;
+}
+
+.album {
+  margin: 0 3rem;
+}
+
+.album-image {
+  height: 160px;
+  width: 160px;
+  box-shadow: 0 1rem 1rem #555555;
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+}
+
+.album-title {
+  font-weight: bold;
+}
+
+.tracks {
+  background-color: #FFFFFF;
+  color: #000000;
+  padding-top: 12rem;
+  margin-top: -10rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.tracks h3 {
+  font-size: 2rem;
+  color: #555555;
+}
+
+.tracks-popular {
+  padding: 0 0 3rem 3rem;
+}
+
+.track {
+  display: grid;
+  grid-template-columns: 4rem 4fr 1fr 1fr;
+  grid-gap: 1rem;
+  margin-bottom: 3rem;
+}
+
+.track > div {
+  line-height: 4;
+}
+
+.track-album-image {
+  height: 48px;
+  width: 48px;
+  border-radius: 0.5rem;
+}
+
+.track-title {
+  line-height: 2;
+  font-weight: bold;
+}
+
+.track-artist {
+  color: #777;
+  line-height: 1.5;
+}
+
+@keyframes slideIntoPlace {
   to {
-    transform: translateX(0);
+    transform: translate(0);
     opacity: 1;
   }
 }
