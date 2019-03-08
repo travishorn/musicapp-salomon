@@ -1,6 +1,6 @@
 # Music App
 
-Visit the live web app at https://travishorn.github.io/musicapp
+Visit the live web app at https://travishorn.github.io/musicapp-salomon
 
 I tried to replicated some of the look and feel of
 [Aurélien Salomon's Apple Music - Smooth floating](https://dribbble.com/shots/5527602-Apple-Music-Smooth-floating)
